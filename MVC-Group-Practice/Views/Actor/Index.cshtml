@@ -1,0 +1,11 @@
+﻿@model IEnumerable<MVC_Group_Practice.Models.Actor>
+
+<ul>
+    @foreach (Actor actor in Model)
+    {
+        <li>
+            @actor.Name
+            <a asp-action="Index" asp-controller="Movie" asp-route-actorId="@actor.Id">Go to movies</a>
+        </li>
+    }
+</ul>
