@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using MVC_Group_Practice.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MovieDatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ContextClassName")));
 
 var app = builder.Build();
 

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MVC_Group_Practice.Models.Movie>
+
+<ul>
+    @foreach (Movie movie in Model)
+    {
+        if(movie != null)
+        {
+            <li>@movie.Title</li>
+        }
+
+    }
+</ul>
