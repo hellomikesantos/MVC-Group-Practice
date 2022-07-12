@@ -1,0 +1,13 @@
+﻿@using MVC_Group_Practice.Models.ViewModels
+@model GenreSelectViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>All Movies - by Genre</h1>
+<form asp-action="AllMovies">
+    <select name="genreId" asp-items="Model.GenreSelectItems"></select>
+    <button type="submit">Go</button>
+</form>
